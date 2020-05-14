@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body 
+        {
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+
+    <p>The Amazing Quiz</p>
+    <h3 onclick="quiz()" id="openQuiz">Click here for Quiz dear user!</h3>
+    <h3 id="openQuiz2"></h3>
+    <h5 onclick="correct()" id="correctA"></h5>
+    <h5 onclick="wrong()" id="wrongA"></h5>
+    <h6 onclick="anotherOne()" id="another"></h6>
+    <h6 onclick="backStart()" id="back"></h6>
+    
+
+    <script>
+
+        function quiz()
+        {
+            document.getElementById('openQuiz').innerHTML = ''
+            document.getElementById('openQuiz2').innerHTML = 'Which Galaxy are we in?';
+            document.getElementById('correctA').innerHTML = 'Milky Way Galaxy';
+            document.getElementById('wrongA').innerHTML = 'Andromeda Galaxy';
+            document.getElementById('back').innerHTML = '';
+        }
+
+        function correct()
+        {
+            document.getElementById('openQuiz').innerHTML = ''
+            document.getElementById('openQuiz2').innerHTML = 'You were correct dear user, you win nothing!';
+            document.getElementById('wrongA').innerHTML = '';
+            document.getElementById('another').innerHTML = 'Another One?';
+            document.getElementById('back').innerHTML = '';
+        }
+
+        function wrong()
+        {
+            document.getElementById('openQuiz').innerHTML = ''
+            document.getElementById('openQuiz2').innerHTML = 'You were DEAD WRONG!!!"';
+            document.getElementById('another').innerHTML = 'Another One?';
+            document.getElementById('correctA').innerHTML = '';
+            document.getElementById('back').innerHTML = '';
+        }
+        function anotherOne()
+        {
+            document.getElementById('openQuiz').innerHTML = ''
+            document.getElementById('openQuiz2').innerHTML = 'Who made this quiz?';
+            document.getElementById('correctA').innerHTML = 'Danica';
+            document.getElementById('wrongA').innerHTML = 'Click this';
+            document.getElementById('another').innerHTML = '';
+            document.getElementById('back').innerHTML = 'Back to Start?';
+        }
+
+        function backStart()
+        {
+            quiz();
+        }
+
+    </script>
+
+</body>
+</html>
